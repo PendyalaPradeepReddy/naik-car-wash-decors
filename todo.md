@@ -1,0 +1,4 @@
+- [x] Select or create a distinct visual treatment for each primary service category.
+- [x] Add service imagery to the Home-page service overview without reducing mobile readability.
+- [x] Add service imagery to the Services-page detailed service panels.
+- [x] Check the revised imagery on desktop and mobile before delivery.

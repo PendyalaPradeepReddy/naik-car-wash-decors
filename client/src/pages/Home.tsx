@@ -6,7 +6,7 @@ import { ArrowRight, ArrowUpRight, CheckCircle2, MapPin, Phone, Star } from "luc
 import { Link } from "wouter";
 import SiteLayout from "@/components/SiteLayout";
 import SectionHeading from "@/components/SectionHeading";
-import { assetUrl, business, packages, services, whyChoose } from "@/lib/site";
+import { assetUrl, business, packages, services, serviceVisuals, whyChoose } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -37,6 +37,7 @@ export default function Home() {
             {services.map((service) => {
               const Icon = service.icon;
               return <Link href="/services" className="service-tile" key={service.index}>
+                <span className="service-tile-image" style={{ backgroundImage: `url(${serviceVisuals[service.title]})` }} aria-hidden="true" />
                 <span className="service-number">{service.index}</span>
                 <span className="service-icon"><Icon size={22} strokeWidth={1.6} /></span>
                 <h3>{service.title}</h3>
