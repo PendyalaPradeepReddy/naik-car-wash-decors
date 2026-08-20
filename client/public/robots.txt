@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://naikcarwashdecors.com/sitemap.xml

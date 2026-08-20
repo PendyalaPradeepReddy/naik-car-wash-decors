@@ -1,0 +1,18 @@
+/**
+ * Midnight Pit Lane design reminder: use editorial storytelling and technical motifs, not stock team claims.
+ * Keep the supplied rating as context, and describe the customer-first operating principle without invented history.
+ */
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "wouter";
+import SiteLayout from "@/components/SiteLayout";
+import SectionHeading from "@/components/SectionHeading";
+import { business, whyChoose } from "@/lib/site";
+
+export default function About() {
+  return <SiteLayout pageTitle="About Naik Car Wash & Decors | Warangal" description="Learn about Naik Car Wash & Decors, a locally focused two-branch car detailing and auto spa destination in Hanamkonda, Warangal.">
+    <section className="page-hero"><div className="page-hero-inner"><p className="eyebrow"><span /> About / 05</p><h1>Warangal’s trusted car care experts.</h1><p>Our focus is straightforward: make car care, styling and finish protection easier to choose, easier to book and easier to return to.</p></div></section>
+    <section className="route-section"><div className="content-width about-story"><div><p className="eyebrow"><span /> Built around the finish</p><h2>A more considered stop for your car.</h2><p>Naik Car Wash & Decors brings together exterior washing, interior detailing, paint protection, wheel alignment and car decors under one local brand. The work is designed for drivers who need their car to feel cleaner, more protected and more put together for the road ahead.</p><p>Two Hanamkonda locations give customers a practical choice of where to visit. Clear service categories and direct contact options help make the journey from question to appointment feel uncomplicated.</p><Link href="/contact" className="btn btn--dark" style={{ marginTop: 14 }}>Talk to the team <ArrowUpRight size={15} /></Link></div><div className="about-story-side"><div className="about-side-copy"><strong>Our approach</strong>Care decisions should be clear. The team can help match a wash, detail, paint-protection or decors request to your vehicle’s present condition and the finish you want to keep.</div></div></div></section>
+    <section className="route-section route-section--dark"><div className="content-width"><SectionHeading dark eyebrow="Customer-first craft" title={<>The care principles<br /> behind every visit.</>} /><div className="care-pillars"><div><span>01 / ASSESS</span><h3>Start with the surface.</h3><p>Clarify the vehicle condition and selected outcome before a service scope is confirmed.</p></div><div><span>02 / DETAIL</span><h3>Work with intention.</h3><p>From cabin touch-points to paint finish, focus is placed on the areas that change the drive.</p></div><div><span>03 / HANDOVER</span><h3>Leave with clarity.</h3><p>Direct, branch-level communication keeps timing, care and next steps easy to understand.</p></div></div></div></section>
+    <section className="route-section"><div className="content-width"><SectionHeading eyebrow="Local confidence" title="The figures customers look for." body="These business-provided indicators show the scale and accessibility of Naik Car Wash & Decors in Hanamkonda." /><div className="proof-list" style={{ borderColor: "#d1d5d7" }}>{whyChoose.map(([stat, copy]) => <div style={{ borderColor: "#d1d5d7" }} key={stat}><strong style={{ color: "#171a1e" }}>{stat}</strong><span style={{ color: "#5b636b" }}>{copy}</span></div>)}</div><p className="quote-note">The 4.7 rating and 280+ Google-review count are provided business figures; view the authentic source on the reviews page.</p></div></section>
+  </SiteLayout>;
+}
