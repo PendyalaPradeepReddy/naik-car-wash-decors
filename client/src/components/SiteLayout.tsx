@@ -22,11 +22,19 @@ export default function SiteLayout({ children, pageTitle, description }: SiteLay
     document.title = pageTitle;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", description);
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute("content", description);
+    const canonicalUrl = `https://naikcarwashdecors.com${location === "/" ? "/" : location}`;
+    const canonical = document.querySelector('link[rel="canonical"]') ?? document.head.appendChild(document.createElement("link"));
+    canonical.setAttribute("rel", "canonical");
+    canonical.setAttribute("href", canonicalUrl);
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", canonicalUrl);
     const onScroll = () => setScrolled(window.scrollY > 18);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [pageTitle, description]);
+  }, [pageTitle, description, location]);
 
   useEffect(() => {
     setMenuOpen(false);

@@ -219,6 +219,15 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          if (id.includes("@radix-ui") || id.includes("lucide-react") || id.includes("framer-motion")) return "ui-runtime";
+          if (id.includes("/react/") || id.includes("/react-dom/") || id.includes("/wouter/")) return "react-runtime";
+        },
+      },
+    },
   },
   server: {
     port: 3000,

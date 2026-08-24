@@ -8,3 +8,8 @@
 - [x] Add a subtle page transition for client-side route changes.
 - [x] Add intersection-based reveal animation to the service imagery on Home and Services pages.
 - [x] Verify motion behavior and production build before delivery.
+- [x] Add strengthened local business, service, FAQ, and organization structured data for local and AI-search discovery.
+- [x] Add local search landing content and crawlable location/map-link references without embedding an interactive map.
+- [x] Remove the embedded location map and retain direct Google Maps business-location links only.
+- [x] Apply high-impact responsive and page-load improvements for mobile visitors.
+- [x] Validate SEO files, map links, mobile layout, and production build.
