@@ -1,0 +1,4 @@
+# Cloudflare Pages configuration for the Naik Car Wash & Decors portfolio website.
+name = "naik-car-wash-decors"
+pages_build_output_dir = "dist/public"
+compatibility_date = "2026-08-24"

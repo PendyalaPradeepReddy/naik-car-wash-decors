@@ -13,3 +13,7 @@
 - [x] Remove the embedded location map and retain direct Google Maps business-location links only.
 - [x] Apply high-impact responsive and page-load improvements for mobile visitors.
 - [x] Validate SEO files, map links, mobile layout, and production build.
+- [ ] Confirm GitHub access and create or select the destination repository.
+- [x] Bundle the website's visual assets and Cloudflare Pages configuration for standalone deployment.
+- [ ] Push the completed project to GitHub and verify the remote repository state.
+- [ ] Provide the exact Cloudflare Pages build settings and deployment handoff.

@@ -11,12 +11,12 @@ import {
 } from "lucide-react";
 
 export const assetUrl = {
-  hero: "/manus-storage/naik-hero-automotive_ecd20b42.jpg",
-  interior: "/manus-storage/naik-interior-detailing_07f439b7.jpg",
-  paint: "/manus-storage/naik-paint-protection_f5174f0b.jpg",
-  exterior: "/manus-storage/naik-exterior-foam-service_a435195a.jpg",
-  alignment: "/manus-storage/naik-wheel-alignment-service_0b53b172.jpg",
-  mark: "/manus-storage/naik-brand-mark_e8a49bec.png",
+  hero: "/images/naik-hero.jpg",
+  interior: "/images/naik-interior.jpg",
+  paint: "/images/naik-paint-protection.jpg",
+  exterior: "/images/naik-exterior-foam.jpg",
+  alignment: "/images/naik-wheel-alignment.jpg",
+  mark: "/images/naik-brand-mark.png",
 };
 
 export const serviceVisuals: Record<string, string> = {
