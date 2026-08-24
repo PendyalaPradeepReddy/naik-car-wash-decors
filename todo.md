@@ -2,3 +2,5 @@
 - [x] Add service imagery to the Home-page service overview without reducing mobile readability.
 - [x] Add service imagery to the Services-page detailed service panels.
 - [x] Check the revised imagery on desktop and mobile before delivery.
+- [x] Set the Naik symbol asset as the website favicon with browser-compatible icon metadata.
+- [x] Validate the updated head configuration and production build.
