@@ -61,7 +61,7 @@ export default function SiteLayout({ children, pageTitle, description }: SiteLay
           </div>
         )}
       </header>
-      <main>{children}</main>
+      <main><div className="route-stage" key={location}>{children}</div></main>
       <footer className="site-footer">
         <div className="footer-top">
           <div className="footer-brand">

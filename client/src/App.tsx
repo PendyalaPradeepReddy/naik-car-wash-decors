@@ -18,6 +18,7 @@ import Contact from "./pages/Contact";
 import Reviews from "./pages/Reviews";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import { BrandedLoader } from "./components/MotionEffects";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -56,6 +57,7 @@ function App() {
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+          <BrandedLoader />
           <Toaster richColors position="top-right" />
           <Router />
         </TooltipProvider>

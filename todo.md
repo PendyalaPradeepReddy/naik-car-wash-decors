@@ -4,3 +4,7 @@
 - [x] Check the revised imagery on desktop and mobile before delivery.
 - [x] Set the Naik symbol asset as the website favicon with browser-compatible icon metadata.
 - [x] Validate the updated head configuration and production build.
+- [x] Add an accessible symbol-led loading screen that respects reduced-motion preferences.
+- [x] Add a subtle page transition for client-side route changes.
+- [x] Add intersection-based reveal animation to the service imagery on Home and Services pages.
+- [x] Verify motion behavior and production build before delivery.

@@ -7,6 +7,19 @@ import { Link } from "wouter";
 import SiteLayout from "@/components/SiteLayout";
 import SectionHeading from "@/components/SectionHeading";
 import { assetUrl, business, packages, services, serviceVisuals, whyChoose } from "@/lib/site";
+import { RevealImage } from "@/components/MotionEffects";
+
+function HomeServiceTile({ service }: { service: (typeof services)[number] }) {
+  const Icon = service.icon;
+  return <Link href="/services" className="service-tile">
+    <RevealImage className="service-tile-image" style={{ backgroundImage: `url(${serviceVisuals[service.title]})` }} />
+    <span className="service-number">{service.index}</span>
+    <span className="service-icon"><Icon size={22} strokeWidth={1.6} /></span>
+    <h3>{service.title}</h3>
+    <p>{service.short}</p>
+    <ArrowRight className="service-arrow" size={19} />
+  </Link>;
+}
 
 export default function Home() {
   return (
@@ -34,17 +47,7 @@ export default function Home() {
         <div className="content-width">
           <SectionHeading eyebrow="01 / The service bay" title={<>Care that goes <em>deeper</em> than clean.</>} body="Choose the work your vehicle needs today. Every package begins with a closer look at the finish, the cabin, and the way you drive." />
           <div className="service-grid">
-            {services.map((service) => {
-              const Icon = service.icon;
-              return <Link href="/services" className="service-tile" key={service.index}>
-                <span className="service-tile-image" style={{ backgroundImage: `url(${serviceVisuals[service.title]})` }} aria-hidden="true" />
-                <span className="service-number">{service.index}</span>
-                <span className="service-icon"><Icon size={22} strokeWidth={1.6} /></span>
-                <h3>{service.title}</h3>
-                <p>{service.short}</p>
-                <ArrowRight className="service-arrow" size={19} />
-              </Link>;
-            })}
+            {services.map((service) => <HomeServiceTile service={service} key={service.index} />)}
           </div>
         </div>
       </section>
